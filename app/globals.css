@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "DIN Next Custom";
+  src:
+    local("DIN Next"),
+    local("DINNextLTPro-Regular"),
+    local("DIN Next LT Pro"),
+    local("DIN 2014");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --background: #0d3576;
+  --background-soft: #123b80;
+  --foreground: #f4f8ff;
+  --muted: #d7e6ff;
+  --accent: #b8d9ff;
+  --font-din-next: "DIN Next Custom", "DIN Next", "DINNextLTPro-Regular", "Bahnschrift", "Segoe UI", sans-serif;
+}
+
+@theme inline {
+  --color-brand: var(--background);
+  --color-brand-soft: var(--background-soft);
+  --color-brand-foreground: var(--foreground);
+  --color-brand-muted: var(--muted);
+  --color-brand-accent: var(--accent);
+  --font-sans: var(--font-din-next);
+  --font-display: var(--font-din-next);
+  --font-technical: var(--font-din-next);
+}
+
+body {
+  background:
+    radial-gradient(circle at 14% 12%, rgba(255, 255, 255, 0.28), transparent 38%),
+    radial-gradient(circle at 88% 9%, rgba(212, 232, 255, 0.36), transparent 34%),
+    radial-gradient(circle at 7% 92%, rgba(255, 255, 255, 0.2), transparent 38%),
+    linear-gradient(165deg, #0b3271 0%, #2359a8 54%, #15458d 100%);
+  color: var(--foreground);
+  font-family: var(--font-din-next);
+  text-rendering: optimizeLegibility;
+}
+
+.font-technical {
+  font-family: var(--font-din-next);
+  letter-spacing: 0.02em;
+}
+
+::selection {
+  background: rgba(184, 217, 255, 0.35);
+  color: #ffffff;
+}
+
+.section-shell {
+  width: min(100%, 74rem);
+  margin-inline: auto;
+}
+
+.surface-card {
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.24), rgba(28, 80, 161, 0.55) 44%, rgba(14, 53, 118, 0.68));
+  border: 1px solid rgba(236, 244, 255, 0.42);
+  box-shadow: 0 12px 34px rgba(6, 23, 54, 0.24);
+  backdrop-filter: blur(5px);
+}
+
+.hero-banner {
+  background: linear-gradient(155deg, #123d83 0%, #2a65b8 52%, #174a94 100%);
+}
+
+.hero-logo-frame {
+  border: 1px solid rgba(222, 238, 255, 0.35);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 18px 42px rgba(6, 23, 54, 0.28);
+  background: rgba(10, 36, 82, 0.38);
+}
+
+.reveal-block {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-block.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-block {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
