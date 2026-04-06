@@ -16,9 +16,9 @@ const kpiItems: Array<{ value: string; label: string; icon: LucideIcon }> = [
   { value: "96%", label: "Client Satisfaction", icon: Handshake },
 ];
 
-export default function Home() {
+export default function GreyHome() {
   return (
-    <div className="min-h-screen overflow-x-clip bg-brand text-brand-foreground">
+    <div className="theme-grey theme-grey-bg min-h-screen overflow-x-clip text-brand-foreground">
       <Header />
       <main>
         <Hero />
@@ -49,13 +49,13 @@ export default function Home() {
       <Footer />
       
       <div className="fixed bottom-6 right-6 z-[100] flex flex-col sm:flex-row items-end sm:items-center gap-3 backdrop-blur-md bg-black/20 p-2 rounded-full border border-white/5">
-        <div className="rounded-full bg-blue-600 px-6 py-3 text-sm font-bold text-white shadow-[0_0_25px_rgba(37,99,235,0.4)] border border-blue-500">
+        <Link href="/" className="rounded-full bg-[#0b162a] border border-neutral-700/50 px-5 py-3 text-sm font-bold text-neutral-400 hover:text-white hover:bg-neutral-800 shadow-xl transition-all">
           Original UI
-        </div>
-        <Link href="/demo-grey" className="rounded-full bg-[#0b162a] border border-slate-700/50 px-5 py-3 text-sm font-bold text-slate-400 hover:text-white hover:bg-slate-800 shadow-xl transition-all">
-          Grey Palette UI
         </Link>
-        <Link href="/demo-v2" className="rounded-full bg-[#0b162a] border border-slate-700/50 px-5 py-3 text-sm font-bold text-slate-400 hover:text-white hover:bg-slate-800 shadow-xl transition-all">
+        <div className="rounded-full bg-neutral-600 px-6 py-3 text-sm font-bold text-white shadow-[0_0_25px_rgba(82,82,82,0.4)] border border-neutral-500">
+          Grey Palette UI
+        </div>
+        <Link href="/demo-v2" className="rounded-full bg-[#0b162a] border border-neutral-700/50 px-5 py-3 text-sm font-bold text-neutral-400 hover:text-white hover:bg-neutral-800 shadow-xl transition-all">
           V2 Structure UI
         </Link>
       </div>

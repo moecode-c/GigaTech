@@ -41,7 +41,7 @@ const bundledNavItems: NavItem[] = [
 ];
 
 const desktopLinkClass =
-  "inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/[0.08] px-5 py-2.5 text-[1rem] font-semibold uppercase tracking-[0.08em] text-white/92 transition-colors hover:border-white/45 hover:bg-white/[0.12]";
+  "inline-flex items-center gap-2.5 rounded-full border border-transparent bg-transparent px-5 py-2.5 text-[1rem] font-semibold uppercase tracking-[0.08em] text-white/92 transition-colors hover:border-white/45 hover:bg-white/[0.12]";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -120,7 +120,7 @@ export default function Header() {
           <div className="relative" ref={desktopBundleRef}>
             <button
               type="button"
-              className="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/[0.08] px-5 py-2.5 text-[1rem] font-semibold uppercase tracking-[0.08em] text-white/92 transition-colors hover:border-white/45 hover:bg-white/[0.12]"
+              className="inline-flex items-center gap-2.5 rounded-full border border-transparent bg-transparent px-5 py-2.5 text-[1rem] font-semibold uppercase tracking-[0.08em] text-white/92 transition-colors hover:border-white/45 hover:bg-white/[0.12]"
               aria-expanded={desktopBundleOpen}
               aria-haspopup="menu"
               onClick={() => setDesktopBundleOpen((open) => !open)}
@@ -144,7 +144,7 @@ export default function Header() {
                       <Link
                         key={item.label}
                         href={item.href}
-                        className="inline-flex min-w-0 items-center gap-2 rounded-xl border border-white/15 bg-white/[0.08] px-3 py-2.5 text-sm font-semibold uppercase tracking-[0.04em] text-white/92 transition-colors hover:border-white/45 hover:bg-white/[0.15] sm:text-[0.95rem]"
+                        className="inline-flex min-w-0 items-center gap-2 rounded-xl border border-transparent bg-transparent px-3 py-2.5 text-sm font-semibold uppercase tracking-[0.04em] text-white/92 transition-colors hover:border-white/45 hover:bg-white/[0.15] sm:text-[0.95rem]"
                         onClick={() => setDesktopBundleOpen(false)}
                       >
                         <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white/[0.16] text-white sm:h-7 sm:w-7">
@@ -180,7 +180,7 @@ export default function Header() {
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="inline-flex items-center gap-2.5 rounded-lg border border-white/20 bg-white/[0.08] px-3.5 py-3 text-base font-semibold uppercase tracking-[0.08em] text-white/92 transition-colors hover:border-white/45 hover:text-white"
+                    className="inline-flex items-center gap-2.5 rounded-lg border border-transparent bg-transparent px-3.5 py-3 text-base font-semibold uppercase tracking-[0.08em] text-white/92 transition-colors hover:border-white/45 hover:bg-white/[0.12] hover:text-white"
                     onClick={() => setMobileOpen(false)}
                   >
                     <Icon className="h-5 w-5" aria-hidden />
@@ -200,7 +200,7 @@ export default function Header() {
                     <Link
                       key={item.label}
                       href={item.href}
-                      className="inline-flex min-w-0 items-center gap-2 rounded-lg border border-white/20 bg-white/[0.1] px-3 py-2.5 text-sm font-semibold uppercase tracking-[0.05em] text-white/92 transition-colors hover:border-white/45 hover:text-white sm:text-[0.95rem]"
+                      className="inline-flex min-w-0 items-center gap-2 rounded-lg border border-transparent bg-transparent px-3 py-2.5 text-sm font-semibold uppercase tracking-[0.05em] text-white/92 transition-colors hover:border-white/45 hover:bg-white/[0.12] hover:text-white sm:text-[0.95rem]"
                       onClick={() => setMobileOpen(false)}
                     >
                       <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white/[0.16] text-white sm:h-7 sm:w-7">
